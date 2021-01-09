@@ -6,10 +6,12 @@ const hourse = {
 };
 
 // Bad string code
+// ***************
 let bio = hourse.name + ' is a '+ hourse.size + ' hourse skilled in  '+ hourse.skills.join(' & ');
 console.log(bio);
 
 // Good string code
+// ****************
 const {name,size,skills} = hourse;
  let bioTwo = `${name} is a ${size} hourse skilled in ${skills.join(' & ')}`;
  console.log("Bio two");

@@ -34,6 +34,7 @@ const dog = {
 };
 
 // Bad code
+// *********
 function feed(animal) {
     return `Feed ${animal.name} ${animal.meal} Kilos of ${animal.diet}`;
 }
@@ -42,6 +43,7 @@ console.log("Bad feeding");
 console.log(feed(dog));
 
 // Good code
+// **********
 function feedGood({name,meal,diet}){
     // or destructure inside function like : let {name,meal,diet} = animal;
 return `Feed ${name} ${meal} kilos of ${diet}`;
