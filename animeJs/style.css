@@ -32,8 +32,8 @@ h2{
 }
 
 .container{
-    height: 500px;
-    width:500px;
+    height: 20px;
+    width:200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +42,5 @@ h2{
 .tail{
     height: 10px;
     width: 10px;
-    border-radius: 50%;
     background-color: blueviolet;
 }
