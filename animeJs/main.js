@@ -30,6 +30,22 @@ const stageAnimation = anime.timeline({
     scale:.5,
      backgroundColor:'#15ffa5',
      borderRadius:'50%'
-});
+})
+
+.add({
+    rotate:360,
+    duration:1000
+})
+
+.add({
+    translateX:100,
+    duration:1000
+})
+
+.add({
+    translateY:50,
+    translateX:0,
+    duration:1000
+})
 
 stageAnimation.play();
