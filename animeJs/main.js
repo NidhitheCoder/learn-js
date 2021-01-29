@@ -13,7 +13,7 @@ for (let i = 0; i < field; i++) {
 
 stage.appendChild(fragment);
 
-const stageAnimation = anime.taimeline({
+const stageAnimation = anime.timeline({
     targets:'.tail',
     easing:'easeInBack',
     delay:anime.stagger(10,{from:'last'}),
@@ -24,5 +24,12 @@ const stageAnimation = anime.taimeline({
 })
 
 .add({
-    translateX()
-})
+    translateX :() => anime.random(-250,250),
+    translateY: () => anime.random(-250,250),
+    delay:anime.stagger(200,{grid,grid,from:'last'}),
+    scale:.5,
+     backgroundColor:'#15ffa5',
+     borderRadius:'50%'
+});
+
+stageAnimation.play();
