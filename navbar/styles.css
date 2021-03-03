@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.item {
+  background-color: green;
+  padding: 2px 10px;
+}
+
+.hoverItem {
+  background-color: hotpink;
+}
+
+.underline {
+  width: 100%;
+  background-color: orangered;
+  height: 5px;
+}
