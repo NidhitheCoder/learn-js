@@ -112,3 +112,12 @@ myFun(1,2,3,4,5);
 const arr2 = [1,2,3,4,5,6];
 const mapped = arr2.map(item=>item + 10);
 console.log(mapped);
+
+const filtered = arr2.filter(el => el === 2 || el ===4);
+console.log(filtered);
+
+const reduced = arr2.reduce((tot,el)=> tot + el );
+console.log(reduced);
+
+const found = arr2.find(el => el > 4);
+console.log(found);
