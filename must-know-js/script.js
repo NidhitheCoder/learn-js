@@ -121,3 +121,20 @@ console.log(reduced);
 
 const found = arr2.find(el => el > 4);
 console.log(found);
+
+
+const arr3 = ['Smith','Jack', 'Liya','Sara','John']
+const foundIndex = arr3.findIndex(el => el === "Liya");
+console.log(foundIndex);
+
+const indexOfItem = arr3.indexOf('John');
+console.log(indexOfItem);
+
+
+const pushed = arr2.push(5);
+console.log(pushed);
+console.log(arr2);
+
+const poped = arr2.pop();
+console.log(poped);
+console.log(arr2)
