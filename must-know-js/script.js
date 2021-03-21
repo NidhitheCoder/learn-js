@@ -138,3 +138,24 @@ console.log(arr2);
 const poped = arr2.pop();
 console.log(poped);
 console.log(arr2)
+
+const shifted = arr2.shifted();
+console.log(arr2);
+console.log(shifted);
+
+const unShifted = arr2.unshift(5,6,7);
+console.log(arr2);
+console.log(unShifted);
+
+let letters = ['a','c','d','e'];
+letters.splice(1,0,'b');
+console.log(letters);
+
+const sliced = letters.slice(2, 4);
+console.log(sliced);
+console.log(letters);
+
+let arr4 = [1,24,5,7,38,8,4];
+const sorter= (firstEl,secondEl) => firstEl - secondEl;
+arr4.sort(sorter);
+console.log(arr4);
