@@ -9,3 +9,10 @@ for(const  i of arr){
 }
 
 arr.forEach(console.log);
+
+const thisisaconditionvariable = 3
+const thisisanoutherconditionvariable =3
+const thisisasamplevaribalewithloglenghth = "skdjhfskksjhkfjsfkjs"
+const thisisanouthervaribalewithloglength =" skdhsdfkjdjfksk";
+
+thisisaconditionvariable === thisisanoutherconditionvariable ? thisisasamplevaribalewithloglenghth : thisisanoutherconditionvariable;
