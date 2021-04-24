@@ -1,11 +1,10 @@
 const rp = require('request-promise');
 const $ = require('cheerio');
-const url = "https://www.cricbuzz.com/live-cricket-scorecard/35673/rr-vs-kkr-18th-match-indian-premier-league-2021";
-
+const url = "https://friction-bring.clodui.com/";
 rp(url)
 .then((html)=> {
-  console.log($('a.cb-text-link', html).length);
-  console.log($('a.cb-text-link', html));
+  console.log( $('li a.nav-anchor', html).length);
+  console.log( $('li a.nav-anchor', html));
 })
 .catch((err)=>console.log(err));
 
