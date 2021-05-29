@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #0f0f0f;
+}
+
+#btns {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+#btns Button {
+  height: 48px;
+  font-size: 24px;
+  flex: 0 0 30%;
+  background: coral;
+  color: white;
+}
+
+#btns Button:nth-child(even){
+  background: lightseagreen;
+}
+
+#btns Button:nth-child(5){
+  background: white;
+  font-size: 30px;
+  font-weight: 800;
+  color: black;
+  border: 3px solid green;
+}
+
+
