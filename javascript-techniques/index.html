@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Techniques</title>
+</head>
+<body>
+  <script>
+    // Use logical OR for conditions
+    const doSomething = (arg1) => {
+      arg1 = arg1 || 32;
+      console.log(arg1);
+    }
+
+    doSomething();
+
+    // Using array length to resizing an array
+    const arr = [11, 12, 13, 14, 15, 16];
+    arr.length = 3;
+    console.log(arr.length);
+    console.log(arr);
+
+    // Stringify an json object
+    const myObj = {
+      name: 'Raj',
+      age: 23,
+      hobbies: {
+        sports: 'Football',
+        Arts: 'Drawing'
+      }
+    };
+
+    console.log(JSON.stringify(myObj, null, "\t"));
+
+    // Convert to numbers
+    let num = "1233";
+    console.log(+num);
+    console.log(+true);
+
+    // To get N number of last elements
+    console.log(arr.slice(-2));
+
+    // To get unique values
+    const arr1= [1, 2, 3, 3, 3, 4, 1, 2, 6, 5, 2, 2];
+    const uniqueArray = [...new Set(arr1)];
+    console.log(uniqueArray);
+
+  </script>
+</body>
+</html>
