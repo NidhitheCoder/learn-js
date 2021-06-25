@@ -22,3 +22,42 @@ const fruits = ['Apple', 'Orange', 'Melon', 'Grapes', 'Berry', 'Grapes', 'Orange
 
 const unique = Array.from(new Set(fruits));
 console.log(unique);
+
+// Dynamic objects
+
+const dynamic = "Hobbies";
+
+const user = {
+  name: 'Jan',
+  mail: 'Jan@mail.com',
+  [dynamic]: 'Music',
+};
+
+console.log(user);
+
+// Slicing arrays
+const items = [ 1, 2, 3, 4, 5, 6, 7];
+items.length = 4;
+console.log(items);
+
+console.log(items.slice(-2));
+
+// Array to object
+const itemsObj = {...items};
+console.log(itemsObj);
+
+// Object to arrays
+const itemsArray = Object.values(itemsObj);
+console.log(itemsArray);
+
+// check the performance
+let startAt = performance.now();
+
+// log time taken code
+for(let i = 0 ; i < 230000; i++){
+  console.log(i)
+}
+
+let endAt = performance.now();
+
+console.log(`${endAt - startAt} took milliseconds to execute`);
