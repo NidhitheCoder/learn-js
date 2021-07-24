@@ -1,29 +1,29 @@
-// // Declaration
-// const loves = makeBread(7); // It works..
-// console.log(loves);
+// Declaration
+const loves = makeBread(7); // It works..
+console.log(loves);
 
-// function makeBread(qty) {
-//   return 'Bread'.repeat(qty);
-// }
+function makeBread(qty) {
+  return 'Bread'.repeat(qty);
+}
 
-// // Function expression
-// const beers = makeBeers(5); // Error: makeBeers is not defined.
-// console.log(beers);
-// const makeBeer = function(qty) {
-//   return 'Beer'.repeat(qty);
-// }
+// Function expression
+const beers = makeBeers(5); // Error: makeBeers is not defined.
+console.log(beers);
+const makeBeer = function(qty) {
+  return 'Beer'.repeat(qty);
+}
 
-// // IIFE
-// (function(){
-//   console.log("haiii");
-// }());
+// IIFE
+(function(){
+  console.log("haiii");
+}());
 
-// // arguments keyword
-// function fun(comedy, song, play) {
-//   console.log(arguments);
-// }
+// arguments keyword
+function fun(comedy, song, play) {
+  console.log(arguments);
+}
 
-// fun("Ha ha", "Ooo la la", "Football");
+fun("Ha ha", "Ooo la la", "Football");
 
 // Arrow functions - arrow functions have there is no this objects
 const makeWine = (qty) => "Wine".repeat(qty);
@@ -67,3 +67,36 @@ console.log(impure2());
 
 const pure = (x) => x+3;
 console.log(pure(4));
+
+// HOF - higher order function : HOF are the functions that are possible to contain functions as parameters and return a function.
+
+const hof = (inputFun) => {
+const called = inputFun();
+return () => "Really funny";
+}
+
+// eg : setTimeout();
+
+// HOF closure
+
+const useCat = () => {
+  let kitty = "baby kitten";
+  return [
+    () => `Meaw ${kitty}`,
+    (newName) => kitty = newName
+  ];
+};
+
+const [ kittanName, setKittanName] = useCat();
+
+console.log(kittanName());
+console.log(setKittanName('lol'));
+console.log(kittanName());
+
+// recursive functions:  a functions call itself in inside. In other words a functions contain its own name in its body
+
+const whatIsTheMeasningOfLife = () => {
+  whatIsTheMeasningOfLife();
+}
+
+whatIsTheMeasningOfLife();
