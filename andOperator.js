@@ -12,3 +12,23 @@ console.log(falsy && truthy);
 console.log(suger && falsy);
 
 console.log("Next section with if statement");
+
+const makeTea = () => "tea ready";
+
+const drinkTea = () => false;
+
+if (suger && makeCoffee) {
+  console.log("check what");
+}
+
+if (suger && makeCoffee()) {
+  console.log("change");
+}
+
+if (suger && drinkTea) {
+  console.log("not drinked");
+}
+
+if (suger && drinkTea()) {
+  console.log("what about function");
+}
