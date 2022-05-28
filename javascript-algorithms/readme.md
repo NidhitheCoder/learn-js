@@ -26,3 +26,33 @@ An algorithm is a set of well-defined instructions to solve a particular problem
   1. Big-O Notation(O-notation) - Worst case complexity
   2. Omega Notation - Best case complexity
   3. Theta Notation - Average case complexity
+
+# Big-O Notation
+- It has two important charactoristics
+  1. It is expressed in terms of the input.
+  2. It focuses on the bigger picture without getting caught up in the minute details
+  3. O(1) - constants, O(n)- Linear
+
+  ## Big-O notation in Objects
+  - An object is a collection of key value pairs
+  - When delete. insert or access an element to an items has constant time complexity.
+    ```
+      - Remove - O(1) - Constants
+      - Insert - O(1) -   "
+      - Access - O(1) -   "
+      - Search - O(n) - Linear
+      - Object.keys() - O(n) - Linear
+      - Object.values() - O(n) - Linear
+      - Object.entries() = O(n) - linear
+    ```
+
+  ## Big-O notation in Arrays
+  - An array is an ordered collection of values.
+  ```
+    - Insert/Remove at end - O(1)
+    - Insert/Remove at beginning - O(n)
+    - Access - O(1)
+    - Search - O(n)
+    - Push/pop - O(1)
+    - Shift/unshift/concat/slice/splice - O(n)
+    - Foreach/filter/map/reduce - O(n)
