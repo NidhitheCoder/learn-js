@@ -64,3 +64,7 @@ An algorithm is a set of well-defined instructions to solve a particular problem
   - Recusion is a technique  to simplify your solution.
   - If you find yourself breaking down your problem into smaller versions of the same problem, recursion is very usefull.
   - Every recursive solution needs to have a base case - a condition to terminate the recursion.
+
+  ### tips for recursive solutions
+  - Figure out how to break down the problem into smaller versions of the same problem.
+  - Identify the base case of recursion.
