@@ -1,0 +1,11 @@
+{
+  "name": "web-automation",
+  "version": "1.0.0",
+  "description": "## puppeteer puppeteer is a node library  which provides a hight level API to control chrome or chromium over the devtoos protocol. Puppeteer runs headless by default, but can be configured to run full(non-headless) Chrome or Chromium.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
