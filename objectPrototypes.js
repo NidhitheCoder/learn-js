@@ -52,7 +52,7 @@ myDate.getYear = function () {
 // Using constructor
 const personPrototype = {
     greet() {
-        console.log("Welcome !")
+        console.log(`Welcome ${this.name}..!`)
     }
 }
 
@@ -64,7 +64,13 @@ function Person(name) {
 Object.assign(Person.prototype, personPrototype)
 
 const ruben = new Person("Ruben");
-
-console.log(ruben)
+const jacob = new Person("Jacob");
 
 ruben.greet();
+jacob.greet();
+personPrototype.greet();
+
+console.log(Object.hasOwn(ruben, 'name'))
+console.log(Object.hasOwn(ruben, 'greet'))
+
+console.log(Object.hasOwnProperty(ruben, 'name')) // Not recommended
