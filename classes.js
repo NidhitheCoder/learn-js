@@ -79,3 +79,20 @@ summers.canStudyArchery();
 
 // summers.#year; // This will return an error 
 console.log(summers.isAble);
+
+
+// Private Methods
+class Example {
+    publicMethod() {
+        this.#privateMethod();
+    }
+
+    #privateMethod() { // This is a private method
+        console.log("Yes its working fine")
+    }
+}
+
+const sample = new Example();
+
+sample.publicMethod();
+// sample.privateMethod(); // This will return an error method is not a function
