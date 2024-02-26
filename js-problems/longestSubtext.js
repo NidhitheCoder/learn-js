@@ -4,6 +4,7 @@ const text = "abcdcefgacda";
 let result = '';
 let lastIndex = 0;
 let newText = text;
+let duplicates = [];
 
 text.split('').forEach((element, index) => {
     let j = false;
@@ -11,15 +12,18 @@ text.split('').forEach((element, index) => {
     newText.split('').forEach((item, index2) => {
         val = text.slice();
 
-        if (element === item) {
+        if (element === item || duplicates.includes(item)) {
             const val = text.slice(index, index2 + 1)
             if (result.length < val.length) {
                 result = val
             }
-            index = index2 + 1;
-            j = true;
-            return;
+        } else {
+            duplicates.push(item)
         }
+        index = index2 + 1;
+        j = true;
+        return;
+
 
         if (j) {
             j = false
