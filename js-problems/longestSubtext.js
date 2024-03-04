@@ -1,20 +1,10 @@
 // Problem: find Longest subtext in a string that has no repeated letter.
 
-const text = "sample data here";
+const text = "abcdeabc";
 let result = '';
 let lastIndex = 0;
 let newText = text;
 let duplicates = [];
-
-
-
-
-
-
-
-
-
-
 
 text.split('').forEach((element, index) => {
     let j = false;
