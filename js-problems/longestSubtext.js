@@ -1,6 +1,6 @@
 // Problem: find Longest subtext in a string that has no repeated letter.
 
-const text = "abcdcefgacda";
+const text = "sample data here";
 let result = '';
 let lastIndex = 0;
 let newText = text;
