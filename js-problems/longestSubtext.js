@@ -22,6 +22,7 @@ text.split('').forEach((element, index) => {
         }
         index = index2 + 1;
         j = true;
+
         return;
 
 
