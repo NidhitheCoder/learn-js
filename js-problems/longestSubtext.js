@@ -6,6 +6,16 @@ let lastIndex = 0;
 let newText = text;
 let duplicates = [];
 
+
+
+
+
+
+
+
+
+
+
 text.split('').forEach((element, index) => {
     let j = false;
     newText = text.slice(index + 1, text.length);
