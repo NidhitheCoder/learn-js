@@ -18,7 +18,6 @@ const {name,size,skills} = hourse;
  console.log(bioTwo);
 
 //  Advanced tag example
-
 const hourseAge = (str,age,name) => {
     const ageStr = age > 5 ? "Old" : "Young";
     return `${str[0]} ${ageStr}  at ${age} years with named ${name}`;
