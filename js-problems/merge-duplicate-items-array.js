@@ -1,21 +1,23 @@
-const mainArray = [[1, 2, 3], [4, 5, 6], [1, 8, 9], [11, 4, 56], [1, 23, 56], [11,2,1], [200,300,400], [500, 11,201]];
+const mainArray = [[1, 2, 3], [4, 5, 6], [1, 8, 9], [11, 4, 56], [1, 23, 56], [11, 2, 1], [200, 300, 400], [500, 11, 201], [11,22]];
 const uniqueArray = [];
 let result = [];
 
-const uniq = [...new Set(mainArray.flatMap(item => item))];
+const getUniqueArrayFromArrays = (arr) => [...new Set(arr.flatMap(j => j))]
 
-uniq.map((item, index) => {
-    if ([...new Set(result.flatMap(j => j))].includes(item)) {
+const uniqueMainArray = getUniqueArrayFromArrays(mainArray);
+
+uniqueMainArray.forEach((item, index) => {
+    if (getUniqueArrayFromArrays(result).includes(item)) {
         return null;
     }
 
-    mainArray.map(it => {
-
+    mainArray.forEach(it => {
         if (it.includes(item)) {
-            result[index] = result[index] ? [...new Set([...result[index], ...it])] : it;
+            result[index] = getUniqueArrayFromArrays([result[index] || [], it]);
             return;
         }
     })
+    console.log('item', item)
 
 })
 
