@@ -1,21 +1,24 @@
-const mainArray = [[1, 2, 3], [4, 5, 6], [1, 8, 9]];
+const mainArray = [[1, 2, 3], [4, 5, 6], [1, 8, 9], [11, 4, 56], [1, 23, 56], [11,2,1], [200,300,400], [500, 11,201]];
+const uniqueArray = [];
 let result = [];
 
-mainArray.map((items, index) => {
-    console.log(items)
+const uniq = [...new Set(mainArray.flatMap(item => item))];
 
-    if (!index) {
-        result.push(items)
+uniq.map((item, index) => {
+    if ([...new Set(result.flatMap(j => j))].includes(item)) {
+        return null;
     }
 
-    items.map((item) => {
-        result.map((resultItems, ind) => {
-            if (resultItems.includes(item)) {
-                result[ind] = [...result[ind], items];
-                return;
-            }
-        })
+    mainArray.map(it => {
+
+        if (it.includes(item)) {
+            result[index] = result[index] ? [...new Set([...result[index], ...it])] : it;
+            return;
+        }
     })
+
 })
 
+
+result = result.filter(item => item)
 console.log(result)
