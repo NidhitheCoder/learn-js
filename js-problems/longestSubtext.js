@@ -1,34 +1,36 @@
 // Problem: find Longest subtext in a string that has no repeated letter.
 
-const text = "abcdcefgacda";
+const text = "abadeabc";
+let realResults = []
 let result = '';
-let lastIndex = 0;
 let newText = text;
 
 text.split('').forEach((element, index) => {
-    let j = false;
     newText = text.slice(index + 1, text.length);
-    newText.split('').forEach((item, index2) => {
-        val = text.slice();
+    console.log(element);
+    if (!result.includes(element)) {
+        result = result + element
+    } else {
+        realResults.push(result);
+        result = element
+    }
 
-        if (element === item) {
-            const val = text.slice(index, index2 + 1)
-            if (result.length < val.length) {
-                result = val
-            }
-            index = index2 + 1;
-            j = true;
-            return;
-        }
+    console.log(result)
+    console.log('real', realResults)
 
-        if (j) {
-            j = false
-            return;
-        }
-    })
+    // if ()
 
 });
 
-if (!result) result = text;
+// if (!result) result = text;
 
-console.log(result)
+// console.log('real result', realResults)
+
+
+// if (!result.includes(element)) {
+//     result = `${result}${element}`;
+// } else {
+//     console.log('r ==> ', result)
+//     realResults.push(result)
+//     result = element
+// }
